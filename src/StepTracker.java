@@ -29,14 +29,19 @@ void statisticsPrint(int month){
         if (monthToData[month].daySteps[i] > maxSteps)
             maxSteps = monthToData[month].daySteps[i];
 
-        if(monthToData[month].daySteps[i] >= stepGoal)
+        if(monthToData[month].daySteps[i] >= stepGoal){
             series++;
+
+        }
         else if(bestSeries < series){
             bestSeries = series;
             series = 0;
         }else
             series = 0;
+
     }
+    if(bestSeries < series)
+        bestSeries = series;
 
     System.out.println();
     System.out.println("Всего шагов за месяц: "+ sumSteps);

@@ -12,17 +12,17 @@ public class Main {
             if(userInput == 1){
 
                 System.out.println("Введите месяц(с 1 до 12): ");
-                int month = enterCheck(scanner)-1;
+                int month = scanner.nextInt()-1;
                 while (month < 0 || month >= 12){
                     System.out.println("Введите месяц(с 1 до 12): ");
-                    month = enterCheck(scanner)-1;
+                    month = scanner.nextInt()-1;
                 }
 
                 System.out.println("Введите день(с 1 до 30): ");
-                int day = enterCheck(scanner)-1;
+                int day = scanner.nextInt()-1;
                 while (day < 0 || day >= 30){
                     System.out.println("Введите день(с 1 до 30): ");
-                    day = enterCheck(scanner)-1;
+                    day = scanner.nextInt()-1;
                 }
 
                 System.out.println("Введите количество шагов: ");
@@ -32,10 +32,10 @@ public class Main {
             }
             if(userInput == 2){
                 System.out.println("Введите месяц(с 1 до 12): ");
-                int month = enterCheck(scanner)-1;
+                int month = scanner.nextInt()-1;
                 while (month < 0 || month >= 12){
                     System.out.println("Введите месяц(с 1 до 12): ");
-                    month = enterCheck(scanner)-1;
+                    month = scanner.nextInt()-1;
                 }
 
                 stepTracker.statisticsPrint(month);
@@ -47,8 +47,8 @@ public class Main {
             if(userInput < 0 || userInput > 3){
                 System.out.println("Такой команды нет, введите команду из списка ");
             }
-            printMenu(); // печатем меню ещё раз перед завершением предыдущего действия
-            userInput = scanner.nextInt(); // повторное считывание данных от пользователя
+            printMenu();
+            userInput = scanner.nextInt();
         }
         System.out.println("Программа завершена");
     }
